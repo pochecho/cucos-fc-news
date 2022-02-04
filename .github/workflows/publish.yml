@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        - node-version: [ 14.x]
+        node-version: [ 14.x]
         - TEST_NAME: "Latest v2"
           AWS_CLI_VERSION: "2"
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/

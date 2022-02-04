@@ -42,4 +42,4 @@ jobs:
     - name: Uploading of files to Amazon S3
       run: |
         cd dist/cucos-fc-news
-        aws s3 cp ./ s3://${{ matrix.bucket-name }} --region=us-east-1
+        aws s3 cp ./ s3://${{ matrix.bucket-name }} --region=us-east-1  --recursive

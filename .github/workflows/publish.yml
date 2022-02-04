@@ -41,5 +41,5 @@ jobs:
       shell: bash
     - name: Uploading of files to Amazon S3
       run: |
-        cd dist/${{ matrix.bucket-name }}
+        cd dist/cucos-fc-news
         aws s3 cp ./ s3://${{ matrix.bucket-name }}

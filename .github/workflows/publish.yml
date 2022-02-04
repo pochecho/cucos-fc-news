@@ -16,7 +16,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 14.x]
+        - node-version: [ 14.x]
+        - TEST_NAME: "Latest v2"
+          AWS_CLI_VERSION: "2"
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,4 +30,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --prod --if-present
-    - run: npm test
+    - name: Test ${{ matrix.TEST_NAME }}
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@master
+        with:
+          version: ${{ matrix.AWS_CLI_VERSION }}
+    - run: aws --version
+        shell: bash

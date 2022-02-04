@@ -1,0 +1,61 @@
+<h3>
+    {{data.title}}
+</h3>
+
+<p class="d-flex row my-3">
+  <img
+    class="col-7"
+    *ngIf="data.img && data['img-position'] == 'left'"
+    src="{{ data.img }}"
+    alt=""
+    srcset=""
+  />
+  <img
+    class="col-12 my-3"
+    *ngIf="data.img && data['img-position'] == 'top'"
+    src="{{ data.img }}"
+    alt=""
+    srcset=""
+  />
+
+  <span
+    *ngIf="
+      data.img &&
+      (data['img-position'] == 'left' || data['img-position'] == 'right')
+    "
+    class="col-5 text-justify"
+  >
+    {{ data.text }}
+  </span>
+
+  <span
+  *ngIf="
+    data.img &&
+    (data['img-position'] == 'top' || data['img-position'] == 'bottom')
+  "
+  class="col-12 text-justify"
+>
+  {{ data.text }}
+</span>
+
+  <span *ngIf="data.img == null" class="col-12 text-justify">
+    {{ data.text }}
+  </span>
+
+  <img
+    class="col-7"
+    *ngIf="data.img && data['img-position'] == 'right'"
+    src="{{ data.img }}"
+    alt=""
+    srcset=""
+  />
+
+  <img
+  class="col-12 my-3"
+  *ngIf="data.img && data['img-position'] == 'bottom'"
+  src="{{ data.img }}"
+  alt=""
+  srcset=""
+/>
+
+</p>

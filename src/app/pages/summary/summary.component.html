@@ -1,5 +1,5 @@
 <div class="d-flex row justify-content-between">
-  <ol class="col-xs-12 col-8">
+  <ol class="col-xs-12 col-sm-12 col-md-8">
     <li class="card mb-3" *ngFor="let date of dates" style="max-width: 540px">
       <div [routerLink]="['../date/' + date.date]" class="row no-gutters">
         <div class="col-md-4">
@@ -20,7 +20,7 @@
     </li>
   </ol>
 
-  <aside class="col-xs-12 col-4 border-left shadow-lg">
+  <aside class="col-xs-12 col-sm-12 col-md-4 border-left shadow-lg">
     <img src="assets/brand/shield.jpeg" alt="" srcset="" />
 
     <ul class="list-group">

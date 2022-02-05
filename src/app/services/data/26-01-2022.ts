@@ -22,7 +22,8 @@ export default {
           {
             component: 'app-col',
             data: {
-              def: 8,
+              sm: 6,
+md: 6,
               xs: 12,
             },
             children: [
@@ -52,7 +53,8 @@ export default {
           {
             component: 'app-col',
             data: {
-              def: 4,
+              sm: 6,
+md:6,
               xs: 12,
             },
             children: [

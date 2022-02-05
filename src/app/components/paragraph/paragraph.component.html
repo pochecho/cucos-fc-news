@@ -4,7 +4,7 @@
 
 <p class="d-flex row my-3">
   <img
-    class="col-7"
+    class="col-xs-12 col-sm-12 col-md-4 col-lg-6"
     *ngIf="data.img && data['img-position'] == 'left'"
     src="{{ data.img }}"
     alt=""
@@ -23,7 +23,7 @@
       data.img &&
       (data['img-position'] == 'left' || data['img-position'] == 'right')
     "
-    class="col-5 text-justify"
+    class="col-xs-12 col-sm-12 col-md-8 col-lg-6 text-justify"
   >
     {{ data.text }}
   </span>
@@ -43,7 +43,7 @@
   </span>
 
   <img
-    class="col-7"
+    class="col-xs-12 col-sm-12 col-md-4 col-lg-6"
     *ngIf="data.img && data['img-position'] == 'right'"
     src="{{ data.img }}"
     alt=""

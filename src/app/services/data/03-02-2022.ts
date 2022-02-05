@@ -49,8 +49,10 @@ export default {
           {
             component: 'app-col',
             data: {
-              def: 6,
+            
               xs: 12,
+md: 6,
+sm: 6
             },
             children: [
               {
@@ -71,7 +73,8 @@ export default {
           {
             component: 'app-col',
             data: {
-              def: 6,
+              md: 6,
+sm: 6,
               xs: 12,
             },
             children: [

@@ -29,7 +29,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - run: npm i
     - run: npm run build --prod --if-present
     - name: Test ${{ matrix.TEST_NAME }}
       id: install-aws-cli

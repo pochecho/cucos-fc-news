@@ -1,0 +1,36 @@
+<ul></ul>
+<aside *ngIf="selectedMember" class="c"></aside>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div *ngFor="let player of team.players" class="col-lg-4 my-3">
+    <div class="card">
+      <img
+        src="{{ player.image || 'assets/general-purpose/bobo-amasao.png' }}"
+        class="card-img-top "
+        alt="   {{ player.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title text-white bg-danger py-2 px-2 text-center">
+          <strong>
+            {{ player.name }}
+          </strong>
+          <span class="badge bg-info">   {{ player.number }}</span>
+        </h5>
+        <p class="card-text text-center ">
+            <small>
+              {{ player.alias }}
+            </small>
+          </p>
+        <p class="card-text text-white bg-secondary py-2 px-2 text-center">
+          {{ player.role }}
+         
+        </p>
+      
+
+        <p *ngIf="!player.image" class="card-text text-success">
+          <small> Soy un bobo amasa'o que no pongo foto. </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

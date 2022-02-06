@@ -1,21 +1,46 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DateDetailComponent } from './pages/detail-date/detail-date.component';
-import { SummaryComponent } from './pages/summary/summary.component';
+import { IndexComponent } from './pages/index/index.component';
+import { MagazineComponent } from './pages/magazine/magazine.component';
+import { MatchDetailComponent } from './pages/match-detail/match-detail.component';
+import { MatchesComponent } from './pages/matches/matches.component';
+import { TeamComponent } from './pages/team/team.component';
+import { WorkInProgressComponent } from './pages/work-in-progress/work-in-progress.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SummaryComponent,
+    component: IndexComponent,
   },
   {
-    path: 'date/:date',
-    component: DateDetailComponent,
-  }
+    path: 'magazine',
+    component: MagazineComponent,
+
+    children: [
+      {
+        path: '',
+        component: MatchesComponent,
+        
+      },
+      {
+        path: 'match/:date',
+        component: MatchDetailComponent,
+      },
+    ],
+  },
+  {
+    path: 'team',
+    component: TeamComponent,
+  },
+  
+  {
+    path: '**',
+    component: WorkInProgressComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

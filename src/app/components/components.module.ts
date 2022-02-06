@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BannerComponent } from './banner/banner.component';
+import { MainHeaderComponent } from '../chunks/main-header/main-header.component';
 import { ParagraphComponent } from './paragraph/paragraph.component';
 import { HeaderComponent } from './header/header.component';
 import { AdDirective } from './ad.directive';
@@ -13,9 +13,7 @@ import { ColComponent } from './col/col.component';
 
 @NgModule({
   declarations: [
-    BannerComponent,
     ParagraphComponent,
-    HeaderComponent,
     AdDirective,
     AdComponent,
     NewsComponent,
@@ -26,9 +24,7 @@ import { ColComponent } from './col/col.component';
     CommonModule
   ],
   exports:[
-    BannerComponent,
     ParagraphComponent,
-    HeaderComponent,
     AdDirective,
     AdComponent,
     NewsComponent,

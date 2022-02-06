@@ -1,0 +1,77 @@
+<section [routerLink]="['match/' + ($lastMatch | async).date ]" class="bg-dark text-white py-4 d-flex flex-column justify-content-between">
+  <h1 *ngIf="$lastMatch" class="mx-2">
+    {{ ($lastMatch | async).title }}
+  </h1>
+  <div
+    id="carouselExampleControls"
+    class="carousel slide my-4"
+    data-bs-ride="carousel"
+    *ngIf="$lastMatch"
+  >
+    <div class="carousel-inner">
+      <div
+        class="carousel-item active"
+        *ngFor="let img of ($lastMatch | async).match.images"
+      >
+        <img [src]="img.image" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <footer class="mx-2">
+    {{ ($lastMatch | async).abstract }}
+  </footer>
+</section>
+
+
+<section class="mt-3 row d-flex">
+  <header class="my-5">
+    <h2>Por si se los perdió ...</h2>
+  </header>
+
+  <ol class="row d-flex flex-row" *ngIf="matches">
+    <ng-container *ngFor="let date of matches">
+      <li
+        *ngIf="date.title != ($lastMatch | async).title"
+        [routerLink]="['match/' + date.date]"
+        class="my-3 col-xs-12 col-sm-12 col-md-6"
+      >
+
+      <div
+      class="card border-dark "
+      
+      >
+        <img src="{{ date.match.preview.image }}" class="card-img" alt="..." />
+        <div class="card-body">
+          <p class="card-text">
+            {{ date.title }}
+          </p>
+          <p class="card-text">
+            <small>
+              {{ date.match.date }}
+            </small>
+          </p>
+        </div>
+      </div>
+        
+      </li>
+    </ng-container>
+  </ol>
+</section>

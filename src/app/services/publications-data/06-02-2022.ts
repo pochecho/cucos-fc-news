@@ -7,6 +7,10 @@ export default {
   abstract:
     'Una vez más, el mono demuestra su falta de habilidad al caer en el campo, ...',
   publicationDate: '06-02-2022',
+  preview: {
+    image: 'assets/dates/03-02-2022/preview.jpeg',
+    photographer: 'Elizabeth Betancurth Candamil'
+  },
   author: 'Yhon Sebastián Santamaría Linares, Sebastián Guarnizo Obando',
   body: {
     children: [

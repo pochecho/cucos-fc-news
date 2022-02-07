@@ -1,8 +1,16 @@
-h1{
-    border-width: 4px !important;
+h1 {
+  border-width: 4px !important;
 }
 
 ul li {
+  cursor: pointer;
+  list-style: none;
+  &:hover {
+    background-color: var(--danger);
+    color: white;
+  }
+}
+ 
+img{
     cursor: pointer;
-    list-style: none;
 }

@@ -15,7 +15,6 @@ export class MatchesInformationService {
       ...Object.entries(MATCHES_DATA).map((date: any) => {
         return {
           date: date[0],
-          preview: date[1].preview,
           images: date[1].images,
           kind: date[1].kind,
           rival: date[1].rival,
@@ -34,7 +33,6 @@ export class MatchesInformationService {
         .map((date: any) => {
           return {
             date: date[0],
-            preview: date[1].preview,
             kind: date[1].kind,
             score: date[1].score,
             rival: date[1].rival,

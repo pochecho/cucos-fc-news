@@ -24,6 +24,7 @@ export class PublicationInformationService {
             abstract: date[1].abstract,
             publicationDate: date[1].publicationDate,
             author: date[1].author,
+            preview: date[1].preview,
           };
         })
     );
@@ -44,6 +45,7 @@ export class PublicationInformationService {
             abstract: date[1].abstract,
             publicationDate: date[1].publicationDate,
             author: date[1].author,
+            preview: date[1].preview,
           };
         })
     );
@@ -60,6 +62,7 @@ export class PublicationInformationService {
           abstract: date[1].abstract,
           publicationDate: date[1].publicationDate,
           author: date[1].author,
+          preview: date[1].preview,
         };
       })
     ).pipe(

@@ -8,7 +8,7 @@ export interface IMatchModel {
   date: string;
   kind: KindMatch;
   rival: string;
-  preview: { image: string; photographer: string };
+  
   images: { image: string; photographer: string }[];
   audios?: { audio: string; recorder: string }[];
   score: {

@@ -6,6 +6,10 @@ export default {
   title: 'Los Cucos pierden de nuevo',
   publicationDate: '27-01-2022',
   author: 'Yhon Sebastián Santamaría Linares, Sebastián Guarnizo Obando',
+  preview: {
+    image: 'assets/dates/26-01-2022/preview.jpeg',
+    photographer: 'Daniela Leyton'
+  },
   body: {
     children: [
       {

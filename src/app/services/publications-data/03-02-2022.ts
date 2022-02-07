@@ -8,7 +8,10 @@ export default {
   title: 'Victoria local con sabor a 29 errores',
   publicationDate: '04-02-2022',
   author: 'Yhon Sebastián Santamaría Linares',
-
+  preview: {
+    image: 'assets/dates/03-02-2022/preview.jpeg',
+    photographer: 'Daniela Leyton'
+  },
   body: {
     children: [
       {

@@ -1,6 +1,10 @@
 <header
-  class="mb-2 d-flex flex-column justify-content-center align-items-center border-bottom"
+  class="mb-2 d-flex  justify-content-center align-items-center border-bottom py-2"
 >
+<section>
+  <img [routerLink]="['']"  width="100px" src="assets/brand/shield.jpeg" alt="">
+</section>
+
   <section class="mb-1 d-flex justify-content-between w-100">
     <ul class="d-flex flex-row flex-wrap">
       <li class="p-2 mx-2" [routerLink]="['closer-matches']" >Próximos partidos</li>
@@ -10,10 +14,10 @@
       <li class="p-2 mx-2" [routerLink]="['magazine']">Magazine</li>
     </ul>
 
-    <ul class="list-group list-group-horizontal-lg mt-1 mr-1">
+    <!-- <ul class="list-group list-group-horizontal-lg mt-1 mr-1">
       <button type="button" class="btn btn-sm btn-danger">
         Iniciar sesión
       </button>
-    </ul>
+    </ul> -->
   </section>
 </header>

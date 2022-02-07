@@ -1,7 +1,7 @@
 import { IMatchModel } from 'src/app/models/match.model';
 
 export default {
-  kind: 'match',
+  kind: 'training',
   date: '06-02-2022',
   rival: 'No aplica',
   score: {
@@ -19,9 +19,5 @@ export default {
       audio: 'assets/dates/06-02-2022/audios/mono.mp3',
       recorder: 'Elizabeth Betancurth Candamil'
     }
-   ],
-   preview: {
-    image: 'assets/dates/03-02-2022/preview.jpeg',
-    photographer: 'Elizabeth Betancurth Candamil'
-  }
+   ]
 } as IMatchModel;

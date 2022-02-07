@@ -14,8 +14,5 @@ export default {
       photographer: 'Daniela Leyton'
     }
    ],
-   preview: {
-    image: 'assets/dates/03-02-2022/preview.jpeg',
-    photographer: 'Daniela Leyton'
-  }
+  
 } as IMatchModel;

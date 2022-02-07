@@ -10,6 +10,7 @@ export interface IMatchModel {
   rival: string;
   preview: { image: string; photographer: string };
   images: { image: string; photographer: string }[];
+  audios?: { audio: string; recorder: string }[];
   score: {
     marked: number;
     received: number;

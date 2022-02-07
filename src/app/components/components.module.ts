@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainHeaderComponent } from '../chunks/main-header/main-header.component';
 import { ParagraphComponent } from './paragraph/paragraph.component';
@@ -8,6 +8,8 @@ import { AdComponent } from './ad/ad.component';
 import { NewsComponent } from './news/news.component';
 import { RowComponent } from './row/row.component';
 import { ColComponent } from './col/col.component';
+import { AudioComponent } from './audio/audio.component';
+import { VideoComponent } from './video/video.component';
 
 
 
@@ -19,9 +21,12 @@ import { ColComponent } from './col/col.component';
     NewsComponent,
     RowComponent,
     ColComponent,
+    AudioComponent,
+    VideoComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ],
   exports:[
     ParagraphComponent,
@@ -30,6 +35,11 @@ import { ColComponent } from './col/col.component';
     NewsComponent,
     RowComponent,
     ColComponent,
+    AudioComponent,
+
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class ComponentsModule { }

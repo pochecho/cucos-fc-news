@@ -1,0 +1,50 @@
+<div class="bg-white rounded-lg p-1 shadow">
+  <h2 class="h6 font-weight-bold text-center mb-1">{{ data.title }}</h2>
+  <div #progress class="progress mx-auto">
+    <span class="progress-left">
+      <span class="progress-bar border-success"></span>
+    </span>
+    <span class="progress-right">
+      <span class="progress-bar border-success"></span>
+    </span>
+    <div
+      class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center"
+    >
+      <img class="w-100 h-100 rounded-circle" src="{{ data.image }}" alt="" srcset="" />
+    </div>
+  </div>
+  <div class="row text-center mt-2 d-flex justify-content-center">
+    <div class="">
+      <button class="btn-success rounded-circle" (click)="play()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-caret-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="">
+      <button class="btn-danger rounded-circle" (click)="pause()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-pause"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -14,7 +14,7 @@ export class PublicationInformationService {
   getPublicationByMatch(match: IMatchModel): Observable<IPublicationModel> {
     return of(
       ...Object.entries(DATA)
-        .filter((item) => item[1].match as IMatchModel == match)
+        .filter((item) => (item[1].match as IMatchModel) == match)
         .map((date: any) => {
           return {
             date: date[0],
@@ -29,7 +29,9 @@ export class PublicationInformationService {
     );
   }
 
-  getPublicationsByTypeMatch(kindMatch: KindMatch): Observable<IPublicationModel> {
+  getPublicationsByTypeMatch(
+    kindMatch: KindMatch
+  ): Observable<IPublicationModel> {
     return of(
       ...Object.entries(DATA)
         .filter((item) => (item[1].match as IMatchModel).kind == kindMatch)
@@ -61,9 +63,16 @@ export class PublicationInformationService {
         };
       })
     ).pipe(
-      max<IPublicationModel>((a: IPublicationModel, b: IPublicationModel) =>
-        new Date(a.publicationDate) < new Date(b.publicationDate) ? -1 : 1
-      )
+      max<IPublicationModel>((a: IPublicationModel, b: IPublicationModel) => {
+        function transform(date: string) {
+          let fragments = date.split('-');
+          return `${fragments[1]}-${fragments[0]}-${fragments[2]}`;
+        }
+        const date1 = new Date(transform(a.publicationDate));
+        const date2 = new Date(transform(b.publicationDate));
+
+        return date1 < date2 ? -1 : 1;
+      })
     );
   }
 }

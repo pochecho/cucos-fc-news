@@ -31,7 +31,7 @@ export default {
             El partido oficial dejó como victoria 7 a 5, al equipo que todos queremos y amamos, pero como
             se viene notando segidamente, CUCOS F.C., lleno de altibajos y momentos malvados de algunos jugadores, 
             provocan que su técnico Simón Osorio no esté del todo contento con la victoria y con el estio de 
-            juego propuesto.configureTestingModule
+            juego propuesto.
             Y sí, como lo dice anteriormente, el término es "Malvado", pues eso resultó siendo el juego de ayer del número 29 "Mora",
             3 errores grotescos, y terminados en gol, hicieron que el partido se complicara; y de nos ser por el
             compromiso de todo el equipo el jugador hubiera salido con un pie listo para ocupar el banquillo de suplentes por el resto de la temporada.

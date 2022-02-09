@@ -16,6 +16,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     if (environment.analytics) {
+      console.log('se manda');
       logEvent(analytics, 'index');
     }
     this.$players = this.technicalStuffService.getPlayers();

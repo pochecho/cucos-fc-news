@@ -30,6 +30,15 @@ export class TeamComponent implements OnInit {
         image: 'assets/players/Manuel Alejandro Zuluaga/profile.png'
 
       },
+
+      {
+        name: 'Camilo Andrés Loaiza Cardozo',
+        number: 6,
+        role: 'Mediocampista',
+        alias: 'calo',
+        image: 'assets/players/Camilo Andrés Loaiza Cardozo/profile.jpeg'
+
+      },
       {
         name: 'Santiago Loaiza Giraldo',
         number: 7,

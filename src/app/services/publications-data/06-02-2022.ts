@@ -209,7 +209,7 @@ export default {
                 component: 'app-audio',
                 data: {
                   audio: `assets/dates/06-02-2022/audios/calo.mp3`,
-                  image: `assets/players/Camilo Loaiza/profile.png`,
+                  image: `assets/players/Camilo Andrés Loaiza Cardozo/profile.png`,
                   title: `Calo`,
                 },
                 children: [],

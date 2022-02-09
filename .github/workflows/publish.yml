@@ -30,7 +30,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - run: npm run build --prod --if-present
+    - run: npm run build -c=production --prod --if-present
     - name: Test ${{ matrix.TEST_NAME }}
       id: install-aws-cli
       uses: unfor19/install-aws-cli-action@master

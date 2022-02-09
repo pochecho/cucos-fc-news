@@ -1,4 +1,4 @@
-<section [routerLink]="['match/' + ($lastMatch | async).date ]" class="bg-dark text-white py-4 d-flex flex-column justify-content-between">
+<section class="bg-dark text-white py-4 d-flex flex-column justify-content-between">
   <h1 *ngIf="$lastMatch" class="mx-2">
     {{ ($lastMatch | async).title }}
   </h1>
@@ -8,12 +8,12 @@
     data-bs-ride="carousel"
     *ngIf="$lastMatch"
   >
-    <div class="carousel-inner">
+    <div #carouselInner class="carousel-inner">
       <div
-        class="carousel-item active"
+        class="carousel-item"
         *ngFor="let img of ($lastMatch | async).match.images"
       >
-        <img [src]="img.image" class="d-block w-100" alt="..." />
+        <img [routerLink]="['match/' + ($lastMatch | async).date ]"  [src]="img.image" class="d-block w-100" alt="..." />
       </div>
     </div>
     <button
@@ -21,6 +21,7 @@
       type="button"
       data-bs-target="#carouselExampleControls"
       data-bs-slide="prev"
+      (click)="prev()"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -30,6 +31,7 @@
       type="button"
       data-bs-target="#carouselExampleControls"
       data-bs-slide="next"
+      (click)="next()"
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>

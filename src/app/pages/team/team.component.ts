@@ -17,31 +17,40 @@ export class TeamComponent implements OnInit {
         number: 1,
         role: 'Arquero',
         alias: 'Caco',
+        image: 'assets/players/Simón Osorio Castaño/profile.png'
       },
       {
-        name: 'Manuel Alejandro Zuluaga ',
+        name: 'Manuel Alejandro Zuluaga',
         number: 5,
         role: 'Mediocampista',
         alias: 'Zulu',
+        image: 'assets/players/Manuel Alejandro Zuluaga/profile.png'
+
       },
       {
         name: 'Santiago Loaiza Giraldo',
         number: 7,
         role: 'Mediocampista',
         alias: 'Mono',
+        image: 'assets/players/Santiago Loaiza Giraldo/profile.png'
+
       },
 
       {
-        name: 'Sebastián Santamaría',
+        name: 'Sebastián Santamaría Linares',
         number: 9,
         role: 'Delantero Centro ',
         alias: 'Rolo',
+        image: 'assets/players/Sebastián Santamaría Linares/profile.png'
+
       },
       {
         name: 'Juan Manuel Valencia López',
         number: 10,
         role: 'Lateral Izquierdo',
         alias: 'Juanma',
+        image: 'assets/players/Juan Manuel Valencia López/profile.png'
+
       },
       {
         name: 'Santiago Rodríguez Ospina',
@@ -63,12 +72,16 @@ export class TeamComponent implements OnInit {
         number: 17,
         role: 'Volante',
         alias: 'Pildo',
+        image: 'assets/players/Juan Felipe Ospina/profile.png'
+
       },
       {
-        name: 'Juan Camilo Morales Sánchez ',
+        name: 'Juan Camilo Morales Sánchez',
         number: 29,
         role: 'Mediocampista Defensivo ',
         alias: 'Mora',
+        image: 'assets/players/Juan Camilo Morales Sánchez/profile.png'
+
       },
     ] as IPlayerModel[],
   };

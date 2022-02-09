@@ -12,6 +12,46 @@ export default {
     {
       image: 'assets/dates/06-02-2022/gallery/photo-1.jpeg',
       photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-11.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-2.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-3.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-4.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-5.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-6.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-7.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-8.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-9.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
+    },
+    {
+      image: 'assets/dates/06-02-2022/gallery/photo-10.jpeg',
+      photographer: 'Elizabeth Betancurth Candamil'
     }
    ],
    audios: [

@@ -20,9 +20,7 @@ export class AudioComponent implements OnInit, AfterViewInit {
   @ViewChild('progress', { static: true }) progress: ElementRef;
   constructor() {}
   ngAfterViewInit(): void {
-    console.log(this.progress);
     this.audio.ontimeupdate = (data) => {
-      console.log(data);
       this.currentValue = (this.audio.currentTime / this.audio.duration) * 100;
 
       function percentageToDegrees(percentage) {
@@ -36,9 +34,6 @@ export class AudioComponent implements OnInit, AfterViewInit {
       var right = this.progress.nativeElement.querySelector(
         '.progress-right .progress-bar'
       );
-      console.log(right);
-      console.log(left);
-
       if (value > 0) {
         if (value <= 50) {
           right.style.transform =
@@ -50,7 +45,6 @@ export class AudioComponent implements OnInit, AfterViewInit {
         }
       }
 
-      console.log(this.currentValue);
     };
   }
 

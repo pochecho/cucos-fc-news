@@ -1,4 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { concat, Observable, Subscription } from 'rxjs';
 import { IMatchModel, KindMatch } from 'src/app/models/match.model';
 import { IPublicationModel } from 'src/app/models/publication.model';
@@ -10,34 +17,57 @@ import { PublicationInformationService } from 'src/app/services/publication-info
   templateUrl: './matches.component.html',
   styleUrls: ['./matches.component.scss'],
 })
-export class MatchesComponent implements  OnDestroy {
+export class MatchesComponent implements OnDestroy, AfterViewInit {
   $lastMatch: Observable<IPublicationModel>;
   $matches: Observable<IPublicationModel>;
   matchesSubscription: Subscription;
   matches: IPublicationModel[];
 
-
-  
-  constructor(private publicationInformationService: PublicationInformationService) {
+  @ViewChild('carouselInner', { static: false }) inner: ElementRef;
+  images;
+  currentIndex = 0;
+  constructor(
+    private publicationInformationService: PublicationInformationService
+  ) {
     this.matches = [];
     this.$matches = concat(
-      this.publicationInformationService.getPublicationsByTypeMatch(KindMatch.MATCH),
-      this.publicationInformationService.getPublicationsByTypeMatch(KindMatch.FRIENDLY_MATCH)
+      this.publicationInformationService.getPublicationsByTypeMatch(
+        KindMatch.MATCH
+      ),
+      this.publicationInformationService.getPublicationsByTypeMatch(
+        KindMatch.FRIENDLY_MATCH
+      )
     );
     this.matchesSubscription = this.$matches.subscribe((data) => {
       this.matches.push(data);
     });
     this.$lastMatch = this.publicationInformationService.getLastPublication();
-    this.$lastMatch.subscribe((a)=>{
-      console.log(a)
-    })
+    this.$lastMatch.subscribe((a) => {
+      console.log(a);
+    });
+  }
+  ngAfterViewInit(): void {
+    this.images = this.inner.nativeElement.querySelectorAll('.carousel-item');
+    console.log(this.images);
+    this.visualizeImage(-1, 0);
   }
   ngOnDestroy(): void {
-
-    
     this.matchesSubscription.unsubscribe();
   }
 
+  next() {
+    this.currentIndex += 1;
+    this.visualizeImage(this.currentIndex - 1, this.currentIndex);
+  }
+  prev() {
+    this.currentIndex -= 1;
+    this.visualizeImage(this.currentIndex + 1, this.currentIndex);
+  }
+
+  visualizeImage(prev, current) {
+    this.images[prev]?.classList.toggle('active');
+    this.images[current]?.classList.toggle('active');
+  }
 
   players = [
     {
@@ -47,10 +77,10 @@ export class MatchesComponent implements  OnDestroy {
       alias: 'Caco',
     },
     {
-      name: 'Manuel Alejandro Zuluaga ', 
+      name: 'Manuel Alejandro Zuluaga ',
       number: 5,
       role: 'Mediocampista',
-      alias: 'Zulu'
+      alias: 'Zulu',
     },
     {
       name: 'Santiago Loaiza Giraldo',
@@ -83,6 +113,4 @@ export class MatchesComponent implements  OnDestroy {
       alias: 'Mora',
     },
   ];
-
-  
 }

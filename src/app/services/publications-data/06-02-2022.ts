@@ -71,6 +71,16 @@ export default {
                 },
                 children: [],
               },
+
+              {
+                component: 'app-paragraph',
+                data: {
+                  text: ` `,
+                  img: 'assets/dates/06-02-2022/gallery/rolo.jpeg',
+                  'img-position': 'top',
+                },
+                children: [],
+              },
             ],
           },
           {
@@ -158,7 +168,7 @@ export default {
                 component: 'app-audio',
                 data: {
                   audio: `assets/dates/06-02-2022/audios/mono.mp3`,
-                  image: `assets/players/Santiago Loaiza Giraldo/profile.jpeg`,
+                  image: `assets/players/Santiago Loaiza Giraldo/profile.png`,
                   title: `El Mono`,
                 },
                 children: [],
@@ -207,7 +217,6 @@ export default {
             ],
           },
 
-
           {
             component: 'app-col',
             data: {
@@ -228,7 +237,6 @@ export default {
               },
             ],
           },
-
 
           {
             component: 'app-col',
@@ -251,7 +259,6 @@ export default {
             ],
           },
 
-
           {
             component: 'app-col',
             data: {
@@ -272,8 +279,92 @@ export default {
               },
             ],
           },
+        ],
+      },
 
+      {
+        component: 'app-row',
+        data: {},
+        children: [
+          {
+            component: 'app-col',
+            data: {
+              xs: 12,
+              sm: 12,
+              md: 12,
+              lg: 12,
+            },
+            children: [
+              {
+                component: 'app-paragraph',
+                data: {
+                  text: `
+                      `,
+                  title: 'Algunas tomas',
+                },
+                children: [],
+              },
+            ],
+          },
+          {
+            component: 'app-col',
+            data: {
+              xs: 12,
+              sm: 12,
+              md: 12,
+              lg: 6,
+            },
+            children: [
+              {
+                component: 'app-video',
+                data: {
+                  video: `assets/dates/06-02-2022/videos/video-1.mp4`,
+                  title: `El Mono`,
+                },
+                children: [],
+              },
+            ],
+          },
 
+          {
+            component: 'app-col',
+            data: {
+              xs: 12,
+              sm: 12,
+              md: 12,
+              lg: 6,
+            },
+            children: [
+              {
+                component: 'app-video',
+                data: {
+                  video: `assets/dates/06-02-2022/videos/video-2.mp4`,
+                  title: `El Mono`,
+                },
+                children: [],
+              },
+            ],
+          },
+
+          {
+            component: 'app-col',
+            data: {
+              xs: 12,
+              sm: 12,
+              md: 12,
+              lg: 6,
+            },
+            children: [
+              {
+                component: 'app-video',
+                data: {
+                  video: `assets/dates/06-02-2022/videos/video-3.mp4`,
+                  title: `El Mono`,
+                },
+                children: [],
+              },
+            ],
+          },
         ],
       },
     ],

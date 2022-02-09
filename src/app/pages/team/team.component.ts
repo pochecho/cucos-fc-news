@@ -35,7 +35,7 @@ export class TeamComponent implements OnInit {
         number: 7,
         role: 'Mediocampista',
         alias: 'Mono',
-        image: 'assets/players/Santiago Loaiza Giraldo/profile.png'
+        image: 'assets/players/Santiago Loaiza Giraldo/profile.jpeg'
 
       },
 

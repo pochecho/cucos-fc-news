@@ -168,7 +168,7 @@ export default {
                 component: 'app-audio',
                 data: {
                   audio: `assets/dates/06-02-2022/audios/mono.mp3`,
-                  image: `assets/players/Santiago Loaiza Giraldo/profile.png`,
+                  image: `assets/players/Santiago Loaiza Giraldo/profile.jpeg`,
                   title: `El Mono`,
                 },
                 children: [],

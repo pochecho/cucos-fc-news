@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { logEvent } from 'firebase/analytics';
+import { analytics } from 'src/app/app.configuration';
 import { IPlayerModel } from 'src/app/models/player.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-team',
@@ -87,5 +90,12 @@ export class TeamComponent implements OnInit {
   };
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+
+    if (environment.analytics) {
+      logEvent(analytics, 'team');
+    }
+    
+  }
 }
